@@ -1,0 +1,55 @@
+{
+    "root": {
+        "ui": "\n    FFmpeg Settings\n\n(1) Input File\n(2) Output File\n(3) Global Options\n(4) Input Options\n(5) Output Options\n(0) Compile Command\n\n{}Selection (x): ",
+        "options": {
+            "1": "inFile",
+            "2": "outFile",
+            "3": "settingsGlobal",
+            "4": "settingsInput",
+            "5": "settingsOutput",
+            "0": "compile"
+        }
+    },
+    "inFile": {
+        "ui": "{}Path to input file: ",
+        "options": {
+            "any": null
+        }
+    },
+    "outFile": {
+        "ui": "{}Path to output file: ",
+        "options": {
+            "any": null
+        }
+    },
+    "settingsGlobal": {},
+    "settingsInput": {},
+    "settingsOutput": {
+        "ui": "\n    Output Options\n\n(1) Video Codec\n(2) Audio Codec\n(c) Direct FFmpeg Input\n(0) Confirm & Exit\n(r) Reset all output options\n\n{}Selection (x): ",
+        "options": {
+            "1": "vcodec",
+            "2": "acodec",
+            "c": "custom",
+            "0": "exit",
+            "r": "reset"
+        }
+    },
+    "vcodecSet": {
+        "ui": "{}Name of video codec/encoder: ",
+        "options": {
+            "any": null
+        }
+    },
+    "acodecSet": {
+        "ui": "{}Name of audio codec/encoder: ",
+        "options": {
+            "any": null
+        }
+    },
+    "customSet": {
+        "ui": "{}Input ffmpeg options: ",
+        "options": {
+            "any": null
+        }
+    }
+}
