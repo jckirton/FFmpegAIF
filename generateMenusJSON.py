@@ -22,6 +22,25 @@ rootOptions = {
     "0": "compile",
 }
 
+settingsInUI: str = """
+    Input Options
+
+(1) Video Codec
+(2) Audio Codec
+(c) Direct FFmpeg Input
+(0) Confirm & Exit
+(r) Reset all output options
+
+{}Selection (x): """
+
+settingsInOptions = {
+    "1": "vcodec",
+    "2": "acodec",
+    "c": "custom",
+    "0": "exit",
+    "r": "reset",
+}
+
 settingsOutUI: str = """
     Output Options
 
@@ -46,10 +65,16 @@ menus: dict = {
     "inFile": {"ui": "{}Path to input file: ", "options": {"any": None}},
     "outFile": {"ui": "{}Path to output file: ", "options": {"any": None}},
     "settingsGlobal": {},
-    "settingsInput": {},
+    "settingsInput": {"ui": settingsInUI, "options": settingsInOptions},
     "settingsOutput": {"ui": settingsOutUI, "options": settingsOutOptions},
-    "vcodecSet": {"ui": "{}Name of video codec/encoder: ", "options": {"any": None}},
-    "acodecSet": {"ui": "{}Name of audio codec/encoder: ", "options": {"any": None}},
+    "vcodecSet": {
+        "ui": '{}Enter "list" for list of avaliable coders.\nName of video codec/coder: ',
+        "options": {"any": None},
+    },
+    "acodecSet": {
+        "ui": '{}Enter "list" for list of avaliable coders.\nName of audio codec/coder: ',
+        "options": {"any": None},
+    },
     "customSet": {
         "ui": "{}Input ffmpeg options: ",
         "options": {"any": None},

@@ -23,7 +23,16 @@
         }
     },
     "settingsGlobal": {},
-    "settingsInput": {},
+    "settingsInput": {
+        "ui": "\n    Input Options\n\n(1) Video Codec\n(2) Audio Codec\n(c) Direct FFmpeg Input\n(0) Confirm & Exit\n(r) Reset all output options\n\n{}Selection (x): ",
+        "options": {
+            "1": "vcodec",
+            "2": "acodec",
+            "c": "custom",
+            "0": "exit",
+            "r": "reset"
+        }
+    },
     "settingsOutput": {
         "ui": "\n    Output Options\n\n(1) Video Codec\n(2) Audio Codec\n(c) Direct FFmpeg Input\n(0) Confirm & Exit\n(r) Reset all output options\n\n{}Selection (x): ",
         "options": {
@@ -35,13 +44,13 @@
         }
     },
     "vcodecSet": {
-        "ui": "{}Name of video codec/encoder: ",
+        "ui": "{}Enter \"list\" for list of avaliable coders.\nName of video codec/coder: ",
         "options": {
             "any": null
         }
     },
     "acodecSet": {
-        "ui": "{}Name of audio codec/encoder: ",
+        "ui": "{}Enter \"list\" for list of avaliable coders.\nName of audio codec/coder: ",
         "options": {
             "any": null
         }

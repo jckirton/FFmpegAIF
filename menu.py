@@ -19,8 +19,8 @@ class Menu:
 
     def prompt(
         self, *, input_note: str | None = "", err_msg: str | None = "Invalid input.\n"
-    ):
-        inputNote: str = input_note
+    ) -> str | float | int:
+        inputNote: str | None = input_note
         if "int" in self.options.keys():
             while True:
                 ui: str = self.ui.format(inputNote)
